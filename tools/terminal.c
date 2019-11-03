@@ -98,7 +98,7 @@ static void print_integer(unsigned int n, unsigned int base){
 	buffer[i] = '\0';
 	do{
 		buffer[--i] = alphabet[n % base];
-		n = n / 10;
+		n = n / base;
 	}while(n && i);
 	primitive_print(&buffer[i]);
 }
